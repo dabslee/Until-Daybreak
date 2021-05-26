@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8877328568527234886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8877328568527234880}
+  - component: {fileID: 8877328568527234881}
+  m_Layer: 0
+  m_Name: DropAssetManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8877328568527234880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877328568527234886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -68.4246, y: -1.2523503, z: -18.282227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8877328568527234881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877328568527234886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064c8b4ac85d5124cafd8b2929b1e451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropOptions:
+  - machete
+  - assault
+  - pistol
+  - shotgun
+  - sniper
+  dropSpriteArray:
+  - {fileID: 21300000, guid: 8263c5f8b0833e84190c958522899d74, type: 3}
+  - {fileID: 21300000, guid: 5ef81e10d0b5f3046bc208c286fd1dfd, type: 3}
+  - {fileID: 21300000, guid: fc24bee8494c3f449af420a655be4d38, type: 3}
+  - {fileID: 21300000, guid: 4b3a72aa6abc4b545a3f245d3e6e50e4, type: 3}
+  - {fileID: 21300000, guid: 42e349bda51ae9a40abb8f12a674f7d2, type: 3}
+  iconSpriteArray:
+  - {fileID: 21300000, guid: 335e90a97585ad445a8bd5205335a093, type: 3}
+  - {fileID: 21300000, guid: 3053a54e3ef30424bbde488b28a4fd97, type: 3}
+  - {fileID: 21300000, guid: bb7c8a36835cba64485391c7bba219c0, type: 3}
+  - {fileID: 21300000, guid: 433dbd38eb5218f45977ed28d304e8ef, type: 3}
+  - {fileID: 21300000, guid: 7d705cfa152afbd45a90e87272c04f37, type: 3}
