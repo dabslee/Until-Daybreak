@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: machete_idle
+  m_Name: pistol_idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 71f7de7ec8cab4e4fad59123601594e9, type: 3}
+      value: {fileID: 21300000, guid: 4c1fa2ee1ac5fa6448f048a355cbd530, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: 3645b78eeaee3884e8051e91a265ecc2, type: 3}
+      value: {fileID: 21300000, guid: 9d303486f1703ed4589160d8e0c16e54, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 71f7de7ec8cab4e4fad59123601594e9, type: 3}
-    - {fileID: 21300000, guid: 3645b78eeaee3884e8051e91a265ecc2, type: 3}
+    - {fileID: 21300000, guid: 4c1fa2ee1ac5fa6448f048a355cbd530, type: 3}
+    - {fileID: 21300000, guid: 9d303486f1703ed4589160d8e0c16e54, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

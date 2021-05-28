@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: machete_idle
+  m_Name: assault_run
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,14 +20,18 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 71f7de7ec8cab4e4fad59123601594e9, type: 3}
+      value: {fileID: 21300000, guid: 084efff9c1f6c5c49b98d76f1ae5aaa5, type: 3}
+    - time: 0.1
+      value: {fileID: 21300000, guid: c330c4f78215e6a488b79ccc740f22f4, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: 3645b78eeaee3884e8051e91a265ecc2, type: 3}
+      value: {fileID: 21300000, guid: 6e863b291474cb1468c3c466867f62f0, type: 3}
+    - time: 0.3
+      value: {fileID: 21300000, guid: 4183879c6e6783343983b16b54027d4d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 5
+  m_SampleRate: 10
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -42,8 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 71f7de7ec8cab4e4fad59123601594e9, type: 3}
-    - {fileID: 21300000, guid: 3645b78eeaee3884e8051e91a265ecc2, type: 3}
+    - {fileID: 21300000, guid: 084efff9c1f6c5c49b98d76f1ae5aaa5, type: 3}
+    - {fileID: 21300000, guid: c330c4f78215e6a488b79ccc740f22f4, type: 3}
+    - {fileID: 21300000, guid: 6e863b291474cb1468c3c466867f62f0, type: 3}
+    - {fileID: 21300000, guid: 4183879c6e6783343983b16b54027d4d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

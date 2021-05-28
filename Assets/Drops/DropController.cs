@@ -15,7 +15,7 @@ public class DropController : MonoBehaviour
         Player = GameObject.Find("Player");
         DropAssetManager assets = DropAssetManager.GetComponent<DropAssetManager>();
         randy = new System.Random();
-        dropType = randy.Next(1, assets.dropOptions.Length); // excluding machete
+        dropType = randy.Next(1, 3);//assets.dropOptions.Length); // excluding machete
         GetComponent<SpriteRenderer>().sprite = assets.dropSpriteArray[dropType];
     }
 
