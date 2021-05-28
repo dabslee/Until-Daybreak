@@ -25,8 +25,8 @@ public class DropController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player") {
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.tag == "Player" && Input.GetKey(KeyCode.DownArrow)) {
             Player.GetComponent<Player>().equippedDropIndex = dropType;
             Destroy(gameObject);
         }

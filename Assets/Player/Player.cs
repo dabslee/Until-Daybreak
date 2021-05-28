@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D m_Rigidbody;
     SpriteRenderer mySpriteRenderer;
-    public float m_Thrust = 100f;
+    public float m_Thrust = 50f;
     Animator anim;
 
     // Start is called before the first frame update
@@ -27,12 +27,14 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow)){
             anim.SetBool("running", true);
             weaponActive = false;
-            m_Rigidbody.velocity = transform.right * m_Thrust;
+            m_Rigidbody.velocity = transform.right * Mathf.Max(0, m_Rigidbody.velocity.x);
+            m_Rigidbody.AddForce(transform.right * m_Thrust);
             mySpriteRenderer.flipX = false;
         } else if (Input.GetKey(KeyCode.LeftArrow)){
             anim.SetBool("running", true);
             weaponActive = false;
-            m_Rigidbody.velocity = -transform.right * m_Thrust;
+            m_Rigidbody.velocity = transform.right * Mathf.Min(0, m_Rigidbody.velocity.x);
+            m_Rigidbody.AddForce(-transform.right * m_Thrust);
             mySpriteRenderer.flipX = true;
         } else {
             anim.SetBool("running", false);
@@ -41,7 +43,7 @@ public class Player : MonoBehaviour
             } else {
                 weaponActive = false;
             }
-            m_Rigidbody.velocity *= 0.95f;
+            m_Rigidbody.velocity *= 0.8f;
         }
         anim.SetInteger("equip index", equippedDropIndex);
         anim.SetBool("active", weaponActive);
