@@ -395,7 +395,7 @@ MonoBehaviour:
   health: 100
   equippedDropIndex: 0
   weaponActive: 0
-  m_Thrust: 30
+  m_Thrust: 2000
 --- !u!1 &182473117
 GameObject:
   m_ObjectHideFlags: 0
