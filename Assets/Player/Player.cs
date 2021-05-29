@@ -26,24 +26,22 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow)){
             anim.SetBool("running", true);
-            weaponActive = false;
             m_Rigidbody.velocity = transform.right * Mathf.Max(0, m_Rigidbody.velocity.x);
             m_Rigidbody.AddForce(transform.right * m_Thrust * Time.deltaTime);
             mySpriteRenderer.flipX = false;
         } else if (Input.GetKey(KeyCode.LeftArrow)){
             anim.SetBool("running", true);
-            weaponActive = false;
             m_Rigidbody.velocity = transform.right * Mathf.Min(0, m_Rigidbody.velocity.x);
             m_Rigidbody.AddForce(-transform.right * m_Thrust * Time.deltaTime);
             mySpriteRenderer.flipX = true;
         } else {
             anim.SetBool("running", false);
-            if (Input.GetKey(KeyCode.Space)) {
-                weaponActive = true;
-            } else {
-                weaponActive = false;
-            }
             m_Rigidbody.velocity *= 0.8f;
+        }
+        if (Input.GetKey(KeyCode.Space)) {
+            weaponActive = true;
+        } else {
+            weaponActive = false;
         }
         anim.SetInteger("equip index", equippedDropIndex);
         anim.SetBool("active", weaponActive);
