@@ -8,12 +8,16 @@ public class DropController : MonoBehaviour
     private System.Random randy;
     public GameObject DropAssetManager;
     public GameObject Player;
+
+    private Player playerscript;
+    private DropAssetManager assets;
     
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.Find("Player");
-        DropAssetManager assets = DropAssetManager.GetComponent<DropAssetManager>();
+        playerscript = Player.GetComponent<Player>();
+        assets = DropAssetManager.GetComponent<DropAssetManager>();
         randy = new System.Random();
         dropType = randy.Next(1, assets.dropOptions.Length); // excluding machete
         GetComponent<SpriteRenderer>().sprite = assets.dropSpriteArray[dropType];
@@ -27,7 +31,8 @@ public class DropController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.tag == "Player" && Input.GetKey(KeyCode.DownArrow)) {
-            Player.GetComponent<Player>().equippedDropIndex = dropType;
+            playerscript.equippedDropIndex = dropType;
+            playerscript.ammo = assets.ammo[dropType];
             Destroy(gameObject);
         }
     }
