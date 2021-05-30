@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
 
     private Stopwatch shootTimer;
     private float shootDelay = 100;
+    public bool showGunShot = false;
+
+    public GameObject dropAssetManager;
+    private DropAssetManager assets;
 
     Rigidbody2D m_Rigidbody;
     SpriteRenderer mySpriteRenderer;
@@ -25,6 +29,7 @@ public class Player : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         shootTimer = Stopwatch.StartNew();
+        assets = dropAssetManager.GetComponent<DropAssetManager>();
     }
 
     // Update is called once per frame
@@ -47,6 +52,12 @@ public class Player : MonoBehaviour
         } else {
             anim.SetBool("running", false);
             m_Rigidbody.velocity *= 0.8f;
+        }
+        shootDelay = assets.period[equippedDropIndex];
+        if (shootTimer.ElapsedMilliseconds < 50 && equippedDropIndex != 0) {
+            showGunShot = true;
+        } else {
+            showGunShot = false;
         }
         if (Input.GetKey(KeyCode.Space)) {
             anim.SetBool("active", true);
