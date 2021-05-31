@@ -29,15 +29,15 @@ public class StandardEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // movement
+        // direction
         float diff = player_transform.position.x - m_transform.position.x;
         if (diff < 0) m_spriterenderer.flipX = true;
         else m_spriterenderer.flipX = false;
 
-        if (Mathf.Abs(diff) < range) {
+        if (Mathf.Abs(diff) < range) { // attacking
             m_animator.SetBool("attacking", true);
             m_animator.speed = attackspeed;
-        } else {
+        } else { // movement
             m_animator.SetBool("attacking", false);
             m_animator.speed = 1;
             m_transform.position = new Vector2(
@@ -45,5 +45,4 @@ public class StandardEnemyController : MonoBehaviour
                 m_transform.position.y);
         }
     }
-
 }
