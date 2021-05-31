@@ -11,6 +11,7 @@ public class DropAssetManager : MonoBehaviour
     public int[] penetration =      {10,        1,          1,          10,         1}; // the max number of targets the weapon can hit
     public float[] speed =          {1f,        0.8f,       1f,         0.8f,       0.6f}; // the relative speed of the player while wielding the weapon
     public float[] period =         {500,       100,        500,        1000,       1000}; // the time between each shot in 100s of milliseconds
+    public float[] knockback =      {1,         2,          2,          5,          5}; // the time between each shot in 100s of milliseconds
 
     public Sprite[] dropSpriteArray;
     public Sprite[] iconSpriteArray;
