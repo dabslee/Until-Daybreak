@@ -15,6 +15,8 @@ public class BulletController : MonoBehaviour
     private Player playerscript;
     private SpriteRenderer player_sprite_renderer;
 
+    private Vector2 initPosition;
+
     void Start()
     {
         // get references
@@ -31,6 +33,7 @@ public class BulletController : MonoBehaviour
         m_transform.position = new Vector2(
             player.GetComponent<Transform>().position.x + assets.gunShotX[type],
             player.GetComponent<Transform>().position.y + assets.gunShotY[type]);
+        initPosition = m_transform.position;
         
         GetComponent<Rigidbody2D>().velocity = transform.right * 100 * (player_sprite_renderer.flipX ? -1 : 1);
     }
@@ -38,7 +41,7 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Abs(m_transform.position.x) > 100) {
+        if (Mathf.Abs(m_transform.position.x - initPosition.x) > assets.range[type]) {
             Destroy(gameObject);
         }
     }

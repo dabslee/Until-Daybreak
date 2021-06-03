@@ -83,3 +83,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bb7c8a36835cba64485391c7bba219c0, type: 3}
   - {fileID: 21300000, guid: 433dbd38eb5218f45977ed28d304e8ef, type: 3}
   - {fileID: 21300000, guid: 7d705cfa152afbd45a90e87272c04f37, type: 3}
+  gunShotX:
+  - 0
+  - 0.1987
+  - 0.1673
+  - 0.1778
+  - 0.2699
+  gunShotY:
+  - 0
+  - -0.0213
+  - -0.0325
+  - -0.029
+  - -0.0102
