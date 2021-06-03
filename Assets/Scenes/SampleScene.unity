@@ -401,6 +401,8 @@ MonoBehaviour:
   dropAssetManager: {fileID: 8877328568527234886, guid: 3713f1e3ec3387642ba9cb28bfb3a87c,
     type: 3}
   m_Thrust: 1500
+  bulletPrefab: {fileID: 8811248318044683331, guid: ba2479dd2d2b1fe4bba17601b622aaeb,
+    type: 3}
 --- !u!1 &182473117
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,18 +719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1551b8f67603e61408ffcd27004c752d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunShotX:
-  - 0
-  - 0.1987
-  - 0.1673
-  - 0.1778
-  - 0.2699
-  gunShotY:
-  - 0
-  - -0.0213
-  - -0.0325
-  - -0.029
-  - -0.0102
   showing: {fileID: 21300000, guid: 42f7be98ec133ba4892d304d01d7775c, type: 3}
   hiding: {fileID: 0}
   player: {fileID: 103880358}

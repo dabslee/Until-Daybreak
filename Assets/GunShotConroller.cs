@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GunShotConroller : MonoBehaviour
 {
-    public float[] gunShotX;
-    public float[] gunShotY;
     public Sprite showing;
     public Sprite hiding;
 
@@ -33,8 +31,8 @@ public class GunShotConroller : MonoBehaviour
         if (playerscript.showGunShot) {
             s_renderer.sprite = showing;
             GetComponent<Transform>().localPosition = new Vector2(
-                (p_s_renderer.flipX ? -1 : 1) * gunShotX[playerscript.equippedDropIndex],
-                gunShotY[playerscript.equippedDropIndex]);
+                (p_s_renderer.flipX ? -1 : 1) * assets.gunShotX[playerscript.equippedDropIndex],
+                assets.gunShotY[playerscript.equippedDropIndex]);
             s_renderer.flipX = p_s_renderer.flipX;
         } else {
             s_renderer.sprite = hiding;

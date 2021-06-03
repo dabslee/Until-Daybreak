@@ -16,6 +16,9 @@ public class DropAssetManager : MonoBehaviour
     public Sprite[] dropSpriteArray;
     public Sprite[] iconSpriteArray;
 
+    public float[] gunShotX = {0, 0.1987f, 0.1673f, 0.1778f, 0.2699f};
+    public float[] gunShotY = {0, -0.0213f, -0.0325f, -0.029f, -0.0102f};
+
     // Start is called before the first frame update
     void Start()
     {

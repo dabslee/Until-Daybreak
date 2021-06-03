@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public float m_Thrust;
     Animator anim;
 
+    public GameObject bulletPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,7 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.Space)) {
             anim.SetBool("active", true);
             if (shootTimer.ElapsedMilliseconds > shootDelay) {
+                Instantiate(bulletPrefab);
                 ammo = Mathf.Max(0, ammo-1);
                 shootTimer = Stopwatch.StartNew();
             }

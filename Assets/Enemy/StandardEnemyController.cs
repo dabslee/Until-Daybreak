@@ -44,5 +44,7 @@ public class StandardEnemyController : MonoBehaviour
                 m_transform.position.x + (diff/Mathf.Abs(diff)) * speed * Time.deltaTime,
                 m_transform.position.y);
         }
+
+        if (hp <= 0) Destroy(gameObject);
     }
 }
