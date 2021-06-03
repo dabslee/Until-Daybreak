@@ -16,6 +16,8 @@ public class StandardEnemyController : MonoBehaviour
     public int hp;
     public float attackspeed;
 
+    public Sprite attacked_form;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,5 +48,9 @@ public class StandardEnemyController : MonoBehaviour
         }
 
         if (hp <= 0) Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        m_animator.SetTrigger("attacked");
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &609935657263795093
+--- !u!1 &411794389531472670
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 609935657263795094}
-  - component: {fileID: 609935657263795095}
-  - component: {fileID: 609935657263795092}
-  - component: {fileID: 609935657263795097}
-  - component: {fileID: 1696378273884804548}
+  - component: {fileID: 4499928802022417232}
+  - component: {fileID: 7924721394314512381}
+  - component: {fileID: 3278079389453051850}
+  - component: {fileID: 1010362492607551623}
+  - component: {fileID: 2881482125970078008}
+  - component: {fileID: 3677307157083359718}
   m_Layer: 8
   m_Name: StandardEnemy
   m_TagString: Enemy
@@ -20,13 +21,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &609935657263795094
+--- !u!4 &4499928802022417232
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609935657263795093}
+  m_GameObject: {fileID: 411794389531472670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15, y: -1.15, z: -3.883655}
   m_LocalScale: {x: 12, y: 12, z: 1}
@@ -34,13 +35,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &609935657263795095
+--- !u!212 &7924721394314512381
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609935657263795093}
+  m_GameObject: {fileID: 411794389531472670}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,14 +85,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &609935657263795092
+--- !u!95 &3278079389453051850
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609935657263795093}
+  m_GameObject: {fileID: 411794389531472670}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e16b702455653d14bae47624beddc89e, type: 2}
@@ -103,13 +104,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &609935657263795097
+--- !u!114 &1010362492607551623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609935657263795093}
+  m_GameObject: {fileID: 411794389531472670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf640d4f134850b41955812f5e2b98fb, type: 3}
@@ -118,19 +119,20 @@ MonoBehaviour:
   speed: 2
   range: 1
   atk: 10
-  hp: 1
+  hp: 2
   attackspeed: 0.5
---- !u!61 &1696378273884804548
+  attacked_form: {fileID: 0}
+--- !u!61 &2881482125970078008
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609935657263795093}
+  m_GameObject: {fileID: 411794389531472670}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.010744125, y: -0.0006715283}
@@ -146,3 +148,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13047092, y: 0.2667325}
   m_EdgeRadius: 0
+--- !u!50 &3677307157083359718
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411794389531472670}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

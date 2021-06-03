@@ -16,6 +16,7 @@ public class BulletController : MonoBehaviour
     private SpriteRenderer player_sprite_renderer;
 
     private Vector2 initPosition;
+    private int penetration_hp;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class BulletController : MonoBehaviour
         initPosition = m_transform.position;
         
         GetComponent<Rigidbody2D>().velocity = transform.right * 100 * (player_sprite_renderer.flipX ? -1 : 1);
+        penetration_hp = assets.penetration[type];
     }
 
     // Update is called once per frame
@@ -49,7 +51,8 @@ public class BulletController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Enemy") {
             other.gameObject.GetComponent<StandardEnemyController>().hp -= assets.damage[type];
-            Destroy(gameObject);
+            penetration_hp--;
+            if (penetration_hp <= 0) Destroy(gameObject);
         }
     }
 }

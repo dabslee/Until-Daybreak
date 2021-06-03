@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde0e25c5f3d8b442b17e2d4a300f479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StandardEnemyPrefab: {fileID: 609935657263795093, guid: f0ccf012dd40bec43abf9fd1f498f488,
+  StandardEnemyPrefab: {fileID: 411794389531472670, guid: f0ccf012dd40bec43abf9fd1f498f488,
     type: 3}
 --- !u!212 &1053675291
 SpriteRenderer:

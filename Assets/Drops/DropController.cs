@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Diagnostics;
 
 public class DropController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class DropController : MonoBehaviour
 
     private Player playerscript;
     private DropAssetManager assets;
+
+    private Stopwatch timer;
     
     // Start is called before the first frame update
     void Start()
@@ -21,12 +24,15 @@ public class DropController : MonoBehaviour
         randy = new System.Random();
         dropType = randy.Next(1, assets.dropOptions.Length); // excluding machete
         GetComponent<SpriteRenderer>().sprite = assets.dropSpriteArray[dropType];
+        timer = Stopwatch.StartNew();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (timer.ElapsedMilliseconds > 30*1000) {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other) {
