@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     
     private Stopwatch timer;
     private long lastTime;
-    private int[] startchoices = {-70, 70};
+    private int[] startchoices = {-100, 100};
 
     // Start is called before the first frame update
     void Start()
