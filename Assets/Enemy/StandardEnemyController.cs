@@ -25,6 +25,7 @@ public class StandardEnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hp += Random.Range(-1,1);
         m_animator = GetComponent<Animator>();
         m_transform = GetComponent<Transform>();
         m_spriterenderer = GetComponent<SpriteRenderer>();
@@ -45,6 +46,7 @@ public class StandardEnemyController : MonoBehaviour
         if (Mathf.Abs(diff) < range) { // attacking
             if (!m_animator.GetBool("attacking")) {
                 m_animator.SetBool("attacking", true);
+                player_script.health -= atk;
                 atk_timer = Stopwatch.StartNew();
             }
             m_animator.speed = attackspeed;
@@ -74,6 +76,7 @@ public class StandardEnemyController : MonoBehaviour
 
     IEnumerator waitThenDie() {
         yield return new WaitForSeconds(0.05f);
+        player_script.killcount++;
         Destroy(gameObject);
     }
 }

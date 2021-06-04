@@ -6,9 +6,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int health = 100;
-    public int killcount = 0;
     public int ammo = 0;
     public int equippedDropIndex = 0;
+    public int killcount = 0;
 
     private Stopwatch shootTimer;
     private float shootDelay = 100;
