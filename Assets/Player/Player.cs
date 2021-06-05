@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
 
     public GameObject bulletPrefab;
 
+    public GameObject screenFlash;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -46,13 +46,15 @@ public class StandardEnemyController : MonoBehaviour
         if (Mathf.Abs(diff) < range) { // attacking
             if (!m_animator.GetBool("attacking")) {
                 m_animator.SetBool("attacking", true);
-                player_script.health -= atk;
+                player_script.health -= atk/2;
+                player_script.screenFlash.GetComponent<Animator>().SetTrigger("hurt");
                 atk_timer = Stopwatch.StartNew();
             }
             m_animator.speed = attackspeed;
             if (atk_timer.ElapsedMilliseconds > 2*100/attackspeed) {
                 atk_timer = Stopwatch.StartNew();
                 player_script.health -= atk;
+                player_script.screenFlash.GetComponent<Animator>().SetTrigger("hurt");
             }
         } else { // movement
             m_animator.SetBool("attacking", false);
